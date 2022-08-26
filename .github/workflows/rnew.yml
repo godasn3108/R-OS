@@ -27,17 +27,4 @@ jobs:
         uses: r-lib/actions/setup-r@f57f1301a053485946083d7a45022b278929a78a
         with:
           r-version: 4.1.1
-      
 
-      - uses: actions/checkout@v2
-        name: check out code
-         
-       - name: Build & push Docker image
-       - uses: mr-smithers-excellent/docker-build-push@v5
-         with:
-          image: nilesh3108/my-project
-          tags: v1, latest
-          registry: registy-url.io
-          dockerfile: Dockerfile.ci
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
