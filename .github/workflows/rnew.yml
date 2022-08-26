@@ -29,11 +29,10 @@ jobs:
           r-version: 4.1.1
 
       - name: Build and Push Docker Image
-        uses: mr-smithers-excellent/docker-build-push@v5
+        uses: mr-smithers-excellent/docker-build-push@v4
         with:
          image: nilesh3108/my-project
          registry: docker.io
-         Dockerfile: Dockerfile.ci
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_PASSWORD }}
        
