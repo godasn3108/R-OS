@@ -28,9 +28,9 @@ jobs:
         with:
           r-version: 4.1.1
       
-     steps:
-       - uses: actions/checkout@v2
-         name: check out code
+
+      - uses: actions/checkout@v2
+        name: check out code
          
        - name: Build & push Docker image
        - uses: mr-smithers-excellent/docker-build-push@v5
