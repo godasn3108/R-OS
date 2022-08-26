@@ -27,4 +27,12 @@ jobs:
         uses: r-lib/actions/setup-r@f57f1301a053485946083d7a45022b278929a78a
         with:
           r-version: 4.1.1
-
+      - name: Install dependencies
+        run: |
+         remotes::install_deps(dependencies = TRUE)
+         remotes::install_cran("rcmdcheck")
+         remotes::install_cran("devtools")
+         devtools::install()
+       shell: Rscript {0}
+       
+       
