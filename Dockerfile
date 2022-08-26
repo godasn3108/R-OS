@@ -1,4 +1,4 @@
-FROM ubuntu-latest
+FROM redhat/ubi
 RUN subscription-manager register --username=nilesh3108 --password=Redhat@1234 \
 && subscription-manager attach --auto \
 && subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms \
