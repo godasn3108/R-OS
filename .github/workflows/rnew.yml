@@ -33,6 +33,6 @@ jobs:
          remotes::install_cran("rcmdcheck")
          remotes::install_cran("devtools")
          devtools::install()
-       shell: Rscript {0}
+        shell: Rscript {0}
        
        
